@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title> mod2 javascript ex3</title>
+</head>
+
+<body>
+    <ul id="listaDeNomes"></ul>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas","Lorraine"];
+        var listaDeNomes = document.getElementById("listaDeNomes");
+        
+        function listar() {
+           var li = document.createElement("li");  
+            li.innerHTML = nomes[i];
+            listaDeNomes.appendChild(li);
+        }
+        
+        for (i = 0; i < nomes.length;) {
+            listar();
+            console.log(nomes[i]);
+            i++
+        }
+//Preencha uma lista (<ul>) no HTML com os itens do vetor
+    </script>
+</body>
+
+</html>

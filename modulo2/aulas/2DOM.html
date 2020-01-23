@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> mod2 javascript 02</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" name="TextoMsg" id="textBoxAlert"/>
+            <button class="botao"name="btnMsgAlert">Mensagem Alert</button>
+            <div class="box" id="redBox">
+                </div> 
+        </div>
+        <script>
+            var inputTextBox = document.querySelector('input[id=textBoxAlert]');
+            var btnMsgAlert = document.querySelector('button[name=btnMsgAlert]');
+            //var inputTextBox = document.querySelector('body div#app input');
+            //var inputTextBox = document.getElementById('textBoxAlert');
+            var inputRedBox = document.getElementById('redBox');
+        btnMsgAlert.onclick= function Msg(){
+            var text = inputTextBox.value;
+            alert(text);
+        }
+        console.log(inputRedBox);
+        console.log(inputTextBox);
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> mod2 javascript ex1</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <button class="botao" name="btnRedBoxOn">Caixa Vermelha ON</button>
+        <button class="botao" name="btnRedBoxOff">Caixa Vermelha OFF</button>
+        <div class="box" id="redBox">
+        </div>
+    </div>
+    <script>
+
+        var btnRedBoxOn = document.querySelector('button[name=btnRedBoxOn]');
+        var btnRedBoxOff = document.querySelector('button[name=btnRedBoxOff]');
+        var RedBoxElement = document.getElementById('redBox');
+
+        var containerElement = document.querySelector('#app');
+
+        btnRedBoxOff.onclick = function btnRedBoxOff() {
+            containerElement.removeChild(RedBoxElement);//remove elementos
+        }
+
+
+
+        btnRedBoxOn.onclick = function caixaVermelha() {
+            containerElement.appendChild(RedBoxElement);
+            RedBoxElement.style.width = 100;
+            RedBoxElement.style.height = 100;
+            RedBoxElement.style.backgroundColor = "f00";
+        }
+
+
+        console.log(RedBoxElement);
+        console.log(btnRedBoxOff);
+        console.log(btnRedBoxOn);
+
+    </script>
+</body>
+
+</html>

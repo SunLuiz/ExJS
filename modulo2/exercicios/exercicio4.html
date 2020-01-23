@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title> mod2 javascript ex4</title>
+</head>
+
+<body>
+    <input type="text" name="nome" id="textBox1" placeholder="Digite seu nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    <ul id="listaDeNomes"></ul>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas", "Lorraine"];
+        var listaDeNomes = document.getElementById("listaDeNomes");
+        var inputTextBox1 = document.querySelector('input[id=textBox1]');
+        
+        for (i = 0; i < (nomes.length);) {
+            listar();
+            console.log(nomes[i]);
+            i++
+        }
+        function listar() {
+            var li = document.createElement("li");
+            li.innerHTML = nomes[i];
+            listaDeNomes.appendChild(li);
+        }
+
+        
+        function adicionar(){
+            var li = document.createElement("li");
+            var text = inputTextBox1.value;
+            nomes[i] = text;
+            li.innerHTML = nomes[i];
+            listaDeNomes.appendChild(li);
+            inputTextBox1.value = "";
+          console.log(nomes[i]);
+          console.log(nomes.length);
+        }
+        
+          
+        
+//Preencha uma lista (<ul>) no HTML com os itens do vetor
+//Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+//Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+//nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+//demais itens anteriores
+//Além disso, o conteúdo do input deve ser apagado após o clique
+ 
+ 
+    </script>
+</body>
+
+</html>

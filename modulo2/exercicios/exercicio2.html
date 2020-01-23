@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> mod2 javascript ex1</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <button class="botao" name="btnRedBoxOn">Caixa ON</button>
+        <button class="botao" name="btnRedBoxOff">Caixa OFF</button>
+        <div class="box"  id="redBox"></div>
+        <div class="box"  id="randomBox"></div>
+    <script>
+
+        var btnRedBoxOn = document.querySelector('button[name=btnRedBoxOn]');
+        var btnRedBoxOff = document.querySelector('button[name=btnRedBoxOff]');
+        var RedBoxElement = document.getElementById('redBox');
+        var randomBoxElement = document.getElementById('randomBox');
+        var containerElement = document.querySelector('#app');
+
+        btnRedBoxOff.onclick = function btnRedBoxOff() {
+            containerElement.removeChild(RedBoxElement);//remove elementos
+            containerElement.removeChild(randomBoxElement);//remove elementos
+        }
+
+        
+        btnRedBoxOn.onclick = function caixaVermelha() {
+            containerElement.appendChild(RedBoxElement);
+            RedBoxElement.style.width = 100;
+            RedBoxElement.style.height = 100;
+            RedBoxElement.style.backgroundColor = getRandomColor();
+        }
+        randomBoxElement.onmouseover = function caixaVermelha() {
+            containerElement.appendChild(RedBoxElement);
+            RedBoxElement.style.width = 100;
+            RedBoxElement.style.height = 100;
+            RedBoxElement.style.backgroundColor = getRandomColor();
+            randomBoxElement.style.width = 100;
+            randomBoxElement.style.height = 100;
+            randomBoxElement.style.backgroundColor = getRandomColor();
+        }
+        RedBoxElement.onmouseover = function caixaVermelha() {
+            containerElement.appendChild(RedBoxElement);
+            RedBoxElement.style.width = 100;
+            RedBoxElement.style.height = 100;
+            RedBoxElement.style.backgroundColor = getRandomColor();
+        }
+        function caixaColorida() {
+            randomBoxElement.style.width = 100;
+            randomBoxElement.style.height = 100;
+            randomBoxElement.style.backgroundColor = getRandomColor();
+        }
+        caixaColorida();
+        //Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse
+        //por cima de algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+        
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+       var newColor = getRandomColor(); // #E943F0
+        
+       
+
+        console.log(RedBoxElement);
+        console.log(btnRedBoxOff);
+        console.log(btnRedBoxOn);
+
+    </script>
+</body>
+
+</html>

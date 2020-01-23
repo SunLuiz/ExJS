@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>javascrpit</title>
+</head>
+
+<body>
+    <script>
+
+        //função que dado um total de anos de estudo 
+        //retorna o quão experiente o usuário é:
+        function experiencia(anos) {
+            if (anosEstudo >= 0 & anosEstudo <= 1) {
+                console.log('Iniciante');
+            } else if (anosEstudo >= 1 & anosEstudo <= 3) {
+                console.log('Intermediario');
+            } else if (anosEstudo >= 3 & anosEstudo <= 6) {
+                console.log('Avancado');
+            } else {
+                console.log('Jedi MAster');
+            }
+        }
+        var anosEstudo = 3;
+        experiencia(anosEstudo);
+
+    </script>
+
+</body>
+
+</html>
